@@ -1,0 +1,19 @@
+﻿Сборка начата 04.04.2016 1:21:52.
+     1>Проект "c:\Users\АНДРЕЙ\documents\visual studio 2015\Projects\Spisok\Spisok\Spisok.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         E:\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Spisok.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         E:\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Spisok.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Spisok.cpp
+         Spisok.cpp
+     1>c:\users\андрей\documents\visual studio 2015\projects\spisok\spisok\spisok.cpp(5): warning C4603: WIN32_LEAN_AND_MEAN: макрос не определен или определение изменилось после использования предкомпилированного заголовка
+         c:\users\андрей\documents\visual studio 2015\projects\spisok\spisok\spisok.cpp(5): note: Добавление макроопределения в предкомпилированный заголовок вместо определения его здесь
+         c:\users\андрей\documents\visual studio 2015\projects\spisok\spisok\spisok.cpp(6): note: использование предварительно скомпилированного заголовка
+       Link:
+         E:\visual studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\андрей\documents\visual studio 2015\Projects\Spisok\Debug\Spisok.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"c:\users\андрей\documents\visual studio 2015\Projects\Spisok\Debug\Spisok.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\андрей\documents\visual studio 2015\Projects\Spisok\Debug\Spisok.lib" /MACHINE:X86 Debug\Spisok.obj
+         Debug\stdafx.obj
+         Spisok.vcxproj -> c:\users\андрей\documents\visual studio 2015\Projects\Spisok\Debug\Spisok.exe
+     1>Сборка проекта "c:\Users\АНДРЕЙ\documents\visual studio 2015\Projects\Spisok\Spisok\Spisok.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:01.69
