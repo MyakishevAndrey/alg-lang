@@ -1,2 +1,0 @@
-# alg-lang
-labbs ay
