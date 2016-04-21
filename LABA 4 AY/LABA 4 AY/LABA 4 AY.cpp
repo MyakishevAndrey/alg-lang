@@ -1,17 +1,17 @@
-// LABA 4 AY.cpp: определяет точку входа для консольного приложения.
+// LABA 4 AY.cpp: Г®ГЇГ°ГҐГ¤ГҐГ«ГїГҐГІ ГІГ®Г·ГЄГі ГўГµГ®Г¤Г  Г¤Г«Гї ГЄГ®Г­Г±Г®Г«ГјГ­Г®ГЈГ® ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї.
 //
-
+// РЎРѕРІРїР°РґР°РµС‚ СЃ РєСѓСЂРіР°РЅРѕРІС‹Рј
 #include "stdafx.h"
 #include <iostream>
 #include <math.h>
 
 using namespace std;
 
-class Complex // класс комплексных чисел  
+class Complex // ГЄГ«Г Г±Г± ГЄГ®Г¬ГЇГ«ГҐГЄГ±Г­Г»Гµ Г·ГЁГ±ГҐГ«  
 {
-	double re, im; // целая и мнимая части  
+	double re, im; // Г¶ГҐГ«Г Гї ГЁ Г¬Г­ГЁГ¬Г Гї Г·Г Г±ГІГЁ  
 
-				   // создаем конструкторы   
+				   // Г±Г®Г§Г¤Г ГҐГ¬ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г»   
 public:
 
 	double get_re()
@@ -26,19 +26,19 @@ public:
 
 	Complex() {};
 
-	Complex(double r) // конструктор по умолчанию  
+	Complex(double r) // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ  
 	{
 		re = r;
 		im = 0;
 	}
 
-	Complex(double r, double i) // конструктор по умолчанию  
+	Complex(double r, double i) // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ  
 	{
 		re = r;
 		im = i;
 	}
 
-	Complex(Complex &c) // конструктор копирования  
+	Complex(Complex &c) // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЄГ®ГЇГЁГ°Г®ГўГ Г­ГЁГї  
 	{
 		re = c.re;
 		im = c.im;
@@ -46,12 +46,12 @@ public:
 
 	~Complex() {}
 
-	float abs() // Модуль комплексного числа  
+	float abs() // ГЊГ®Г¤ГіГ«Гј ГЄГ®Г¬ГЇГ«ГҐГЄГ±Г­Г®ГЈГ® Г·ГЁГ±Г«Г   
 	{
 		return sqrt(re * re - im * im);
 	}
 
-	Complex & operator = (Complex &c) // перегрузка оператора присваивания  
+	Complex & operator = (Complex &c) // ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  ГЇГ°ГЁГ±ГўГ ГЁГўГ Г­ГЁГї  
 	{
 		re = c.re;
 		im = c.im;
@@ -59,7 +59,7 @@ public:
 		return (*this);
 	}
 
-	Complex Complex::operator + (Complex &c) // перегрузка оператора сложения  
+	Complex Complex::operator + (Complex &c) // ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  Г±Г«Г®Г¦ГҐГ­ГЁГї  
 	{
 		Complex temp;
 
@@ -70,7 +70,7 @@ public:
 	}
 
 
-	Complex Complex::operator * (Complex &c) // перегрузка оператора умножения
+	Complex Complex::operator * (Complex &c) // ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г®ГЇГҐГ°Г ГІГ®Г°Г  ГіГ¬Г­Г®Г¦ГҐГ­ГЁГї
 	{
 		Complex temp;
 
@@ -89,10 +89,10 @@ class matrix {
 public:
 	matrix(int m, int n) : T(NULL), M(m), N(n)
 	{
-		T = new Complex*[M]; //строки в массиве
+		T = new Complex*[M]; //Г±ГІГ°Г®ГЄГЁ Гў Г¬Г Г±Г±ГЁГўГҐ
 		for (int i = 0; i < M; i++)
 		{
-			T[i] = new Complex[N]; //  столбцы
+			T[i] = new Complex[N]; //  Г±ГІГ®Г«ГЎГ¶Г»
 			for (int j = 0; j < N; j++)
 				T[i][j] = Complex(0, 0);
 		}
@@ -125,7 +125,7 @@ public:
 
 };
 
-matrix operator+(matrix& s1, matrix& s2)//перегрузка сложения матриц
+matrix operator+(matrix& s1, matrix& s2)//ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г±Г«Г®Г¦ГҐГ­ГЁГї Г¬Г ГІГ°ГЁГ¶
 {
 	matrix q(s1.M, s1.N);
 	for (int i = 0; i < s1.M; i++)
@@ -138,7 +138,7 @@ matrix operator+(matrix& s1, matrix& s2)//перегрузка сложения матриц
 	return q;
 }
 
-matrix operator*(matrix& s1, matrix& s2)//перегрузка перемножения матриц
+matrix operator*(matrix& s1, matrix& s2)//ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  ГЇГҐГ°ГҐГ¬Г­Г®Г¦ГҐГ­ГЁГї Г¬Г ГІГ°ГЁГ¶
 {
 	if (s1.N != s2.M)
 		throw "ne pravilnie razmeri";
@@ -157,7 +157,7 @@ matrix operator*(matrix& s1, matrix& s2)//перегрузка перемножения матриц
 	return g;
 }
 
-matrix operator~(matrix& s1)//перегрузка транспонирования матрицы
+matrix operator~(matrix& s1)//ГЇГҐГ°ГҐГЈГ°ГіГ§ГЄГ  ГІГ°Г Г­Г±ГЇГ®Г­ГЁГ°Г®ГўГ Г­ГЁГї Г¬Г ГІГ°ГЁГ¶Г»
 {
 	matrix q(s1.N, s1.M);
 	for (int i = 0; i < s1.M; i++)
@@ -175,7 +175,7 @@ int main()
 	Complex value1(5, 2);
 	Complex value2(3, -3);
 
-	matrix A(3, 2);        // До запятой идет целай часть потом мнимая
+	matrix A(3, 2);        // Г„Г® Г§Г ГЇГїГІГ®Г© ГЁГ¤ГҐГІ Г¶ГҐГ«Г Г© Г·Г Г±ГІГј ГЇГ®ГІГ®Г¬ Г¬Г­ГЁГ¬Г Гї
 	A(0, 0) = Complex(1, 0);
 	A(0, 1) = Complex(2, 1);
 	A(1, 0) = Complex(0, 0);
@@ -204,15 +204,15 @@ int main()
 	cout << "Matrica F: " << endl;
 	F.print();
 	matrix C(2, 2);
-	C = A + F;//сложение матриц
+	C = A + F;//Г±Г«Г®Г¦ГҐГ­ГЁГҐ Г¬Г ГІГ°ГЁГ¶
 	cout << "Matrica A+F: " << endl;
 	C.print();
 	matrix D(2, 2);
-	D = A * B;//перемножение матриц
+	D = A * B;//ГЇГҐГ°ГҐГ¬Г­Г®Г¦ГҐГ­ГЁГҐ Г¬Г ГІГ°ГЁГ¶
 	cout << "Matrica A*B: " << endl;
 	D.print();
 	matrix E(2, 2);
-	E = ~A;//транспонирование матрицы
+	E = ~A;//ГІГ°Г Г­Г±ГЇГ®Г­ГЁГ°Г®ГўГ Г­ГЁГҐ Г¬Г ГІГ°ГЁГ¶Г»
 	cout << "Matrica A transponirovannay: " << endl;
 	E.print();
 	try
