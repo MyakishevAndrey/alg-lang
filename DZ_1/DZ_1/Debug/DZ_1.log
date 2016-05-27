@@ -1,0 +1,17 @@
+﻿Сборка начата 27.05.2016 23:11:10.
+     1>Проект "c:\Users\АНДРЕЙ\documents\visual studio 2015\Projects\DZ_1\DZ_1\DZ_1.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         E:\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\DZ_1.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt DZ_1.cpp
+         DZ_1.cpp
+     1>c:\users\андрей\documents\visual studio 2015\projects\dz_1\dz_1\izbirateli.h(66): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>c:\users\андрей\documents\visual studio 2015\projects\dz_1\dz_1\dz_1.cpp(12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+       Link:
+         E:\visual studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\андрей\documents\visual studio 2015\Projects\DZ_1\Debug\DZ_1.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"E:\visual studio\VC\Include\Manifest\dpiaware.manifest" /Debug /PDB:"c:\users\андрей\documents\visual studio 2015\Projects\DZ_1\Debug\DZ_1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\андрей\documents\visual studio 2015\Projects\DZ_1\Debug\DZ_1.lib" /MACHINE:X86 Debug\DZ_1.res
+         Debug\DZ_1.obj
+         Debug\stdafx.obj
+         DZ_1.vcxproj -> c:\users\андрей\documents\visual studio 2015\Projects\DZ_1\Debug\DZ_1.exe
+     1>Сборка проекта "c:\Users\АНДРЕЙ\documents\visual studio 2015\Projects\DZ_1\DZ_1\DZ_1.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:01.43
