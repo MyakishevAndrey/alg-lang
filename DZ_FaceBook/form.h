@@ -22,6 +22,7 @@ private:
     fbConnect * fb;
 
     void setPDataToLabels();
+    void on_listWidget_itemClicked(QListWidgetItem *item);
 
     QString my_name;
     QString my_id;
@@ -44,6 +45,8 @@ private slots:
     void set_news();
     void on_pushButton_2_clicked();
     void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
 
 signals:
     void has_news();

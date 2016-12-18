@@ -99,6 +99,39 @@ QPixmap fbConnect::fbRequestForPicture(const QString &in)
     return pixmap;
 }
 
+QJsonObject fbConnect::fbPostMessage(QString texxt)
+{
+    QString str = "https://graph.facebook.com/v2.8/me/feed";
+    QUrl url(str);
+    QNetworkRequest request(url);
+    request.setRawHeader(QByteArray("Authorization"), QByteArray(token.toStdString().c_str()));
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "text");
+    QString text;
+    if(texxt.isEmpty())
+    {text = "message=test+message+new";}
+    else {text = QString("message=")+texxt;}
+    qDebug() << text;
+    QNetworkReply* reply = manager->post(request, text.toStdString().c_str());
+
+    QEventLoop loop;
+    connect(reply, SIGNAL(finished()), &loop, SLOT(quit()));
+    loop.exec();
+
+    if(reply->error() != QNetworkReply::NoError){
+        qDebug() <<  reply->errorString();
+        reply->deleteLater();
+        return QJsonObject();
+    }
+
+    QByteArray data = reply->readAll();
+    QString strData = QString::fromUtf8(data);
+
+    qDebug() << strData;
+
+    reply->deleteLater();
+    return QJsonObject();
+}
+
 bool fbConnect::isReplyCorrect(const QJsonObject &obj)
 {
     if(!obj["error"].isObject()) return true;

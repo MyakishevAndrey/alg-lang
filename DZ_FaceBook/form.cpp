@@ -15,11 +15,10 @@ Form::Form(fbConnect *_fb, QWidget *parent) :
 
     QJsonObject profileData = fb->fbRequest("me", "?fields=id,name,email,picture");
     QJsonObject feed = fb->fbRequest("me/feed", "");
-    QJsonObject friends = fb->fbRequest("me/taggable_friends", "?fields=name,id");
-    //qDebug() <<  profileData;
+    QJsonObject friends = fb->fbRequest("me/taggable_friends", "");
     friends_array = friends["data"].toArray();
     photo_url = profileData["picture"].toObject()["data"].toObject()["url"].toString();
-    //qDebug() << feed;
+    //qDebug() << friends;
     QPixmap photo = fb->fbRequestForPicture(photo_url);
     my_photo = photo;
     QSize PicSize(100, 100);
@@ -114,3 +113,15 @@ void Form::on_pushButton_clicked()
     emit has_news();
 }
 
+void Form::on_listWidget_itemClicked(QListWidgetItem *item)
+{
+    //qDebug() << "ok";
+}
+
+void Form::on_pushButton_3_clicked()
+{
+    fb->fbPostMessage(ui->le_post->text());
+    QJsonObject feed = fb->fbRequest("me/feed", "");
+    news_array = feed["data"].toArray();
+    emit has_news();
+}

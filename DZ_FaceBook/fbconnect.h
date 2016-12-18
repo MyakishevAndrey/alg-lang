@@ -3,7 +3,7 @@
 #ifndef FBCONNECT_H
 #define FBCONNECT_H
 
-#define APP_ID  "1085382584904323"
+#define APP_ID  "1813896548883742"
 #define APP_VERSION "v2.8"
 
 #include <QObject>
@@ -30,6 +30,7 @@ public:
     explicit fbConnect();
     QJsonObject fbRequest(QString _method, QString _args);
     QPixmap fbRequestForPicture(const QString &in);
+    QJsonObject fbPostMessage(QString texxt);
 signals:
     void ready(); // посылаем главному окну
 public slots:
